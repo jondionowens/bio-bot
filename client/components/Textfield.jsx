@@ -1,8 +1,8 @@
 import React from 'react';
 
-const TextField = () => {
+const TextField = (props) => {
   return (
-    <input type="text" />
+    <input type="text" id="userMessage" onChange={props.handleChange}/>
   )
 };
 
