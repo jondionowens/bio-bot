@@ -20,7 +20,7 @@ class App extends React.Component {
     fetch('/api/bot',{
       method: 'POST',
       body: JSON.stringify({
-        userMessage: 'HI there JonBot!'
+        userMessage: this.state.userMessage
       }),
       headers: {"Content-Type": "application/json"}
     })

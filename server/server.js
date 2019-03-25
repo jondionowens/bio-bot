@@ -16,16 +16,15 @@ app.use('/', express.static(path.join(__dirname, '../public')));
 
 app.use('/api/bot', (req, res) => {
   console.log('SERVER.JS', req.body);
-  res.send({result: 'success'});
-  // jonBot.message({
-  //   workspace_id: process.env.WATSON_JONBOT_WORKSPACE_ID,
-  //   input: {'text': 'Hello'}
-  // },  function(err, response) {
-  //   if (err)
-  //     console.log('error:', err);
-  //   else
-  //     console.log(JSON.stringify(response, null, 2));
-  // });
+  jonBot.message({
+    workspace_id: process.env.WATSON_JONBOT_WORKSPACE_ID,
+    input: {'text': req.body.userMessage}
+  },  function(err, response) {
+    if (err)
+      console.log('error:', err);
+    else
+      res.send(JSON.stringify(response.output.text, null, 2))
+  });
 });
 
 app.listen(port, () => {
