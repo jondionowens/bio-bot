@@ -2,7 +2,10 @@ import React from 'react';
 
 const TextField = (props) => {
   return (
-    <input type="text" id="userMessage" onChange={props.handleChange}/>
+    <div>
+      <input type="text" id="userMessage" onChange={props.handleChange}/>
+      <button onClick={props.sendMessage}>Send</button>
+    </div>
   )
 };
 
