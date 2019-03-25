@@ -5,7 +5,7 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-
+      messageHistory: []
     }
   }
 
@@ -24,12 +24,13 @@ class App extends React.Component {
       }),
       headers: {"Content-Type": "application/json"}
     })
-    .then(function(response){
-      return response.json()
-    }).then(function(body){
-      console.log(body);
+    .then((res) => {
+      return res.json()
+    }).then((botResponse) => {
+      const historyUpdate = this.state.messageHistory;
+      historyUpdate.push(botResponse[0]);
+      this.setState({messageHistory: historyUpdate})
     });
-
   }
 
   render() {
