@@ -17,14 +17,19 @@ class App extends React.Component {
   };
 
   sendMessage() {
-    console.log(this.state.userMessage)
-    fetch('/api/bot', {
-      method: "POST", // *GET, POST, PUT, DELETE, etc.
-      body: this.state.userMessage 
+    fetch('/api/bot',{
+      method: 'POST',
+      body: JSON.stringify({
+        userMessage: 'HI there JonBot!'
+      }),
+      headers: {"Content-Type": "application/json"}
     })
-    .then((res) => {
-      console.log('Response from server:', res.result);
-    })
+    .then(function(response){
+      return response.json()
+    }).then(function(body){
+      console.log(body);
+    });
+
   }
 
   render() {
