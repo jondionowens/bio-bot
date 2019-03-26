@@ -1,5 +1,6 @@
 import React from 'react';
 import Textfield from './Textfield.jsx';
+import '../styles/App.css';
 
 class App extends React.Component {
   constructor() {
@@ -35,9 +36,10 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <div>Ask a question about Jon:</div>
-        <Textfield handleChange={this.handleChange.bind(this)} sendMessage={this.sendMessage.bind(this)}/>
+      <div id="wrapper">
+        sfdsf
+        {/* <div>Ask a question about Jon:</div>
+        <Textfield handleChange={this.handleChange.bind(this)} sendMessage={this.sendMessage.bind(this)}/> */}
       </div>
     )
   }
