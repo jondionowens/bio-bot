@@ -36,10 +36,13 @@ class App extends React.Component {
 
   render() {
     return (
-      <div id="wrapper">
+      <div id="app">
+        <div id="chatWindow">sdfdsf</div>
+      <div id="inputBox">
         sfdsf
         {/* <div>Ask a question about Jon:</div>
         <Textfield handleChange={this.handleChange.bind(this)} sendMessage={this.sendMessage.bind(this)}/> */}
+      </div>
       </div>
     )
   }

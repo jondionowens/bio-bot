@@ -1,7 +1,24 @@
-body {
-  background-color: #000;
+body, html {
+  background-color: rgb(5, 32, 39);
+  height: 100%;
+  margin: 0;
 }
 
-/* #app {
-  background-color: #000;
-} */
+#app {
+  display: grid;
+  height: 100%;
+  background-color: #fff;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+#chatWindow {
+  background-color: #ffff00;
+}
+
+#inputBox {
+  background-color: #00ff00;
+}
+
+
+
