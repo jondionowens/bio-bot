@@ -37,7 +37,26 @@ class App extends React.Component {
   render() {
     return (
       <div id="wrapper">
-        <div id="chatWindow">sdfdsf</div>
+        <div id="chatWindow">
+        <div id="rainbow">
+          <div class="col">|</div>
+          <div class="col">|</div>
+          <div class="col">|</div>
+          <div class="col">|</div>
+          <div class="col">|</div>
+          <div class="col">|</div>
+          <div class="col">|</div>
+          <div class="col">|</div>
+          <div class="col">|</div>
+          <div class="col">|</div>
+          <div class="col">|</div>
+          <div class="col">|</div>
+          <div class="col">|</div>
+          <div class="col">|</div>
+
+
+        </div>
+        </div>
       <div id="inputBox">
         sfdsf
         {/* <div>Ask a question about Jon:</div>

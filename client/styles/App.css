@@ -11,8 +11,20 @@ body, html {
 #wrapper {
   display: grid;
   height: 100%;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 100px;
+  grid-template-columns: [wrapper] 1fr;
+  grid-template-rows: [chatWindow]1fr [messageBox]100px;
+  grid-row-gap: 1rem;
+}
+
+#rainbow {
+  display: grid;
+  grid-template-columns: repeat(14, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: (2px);
+}
+
+.col {
+  background-color: #00ff00;
 }
 
 #chatWindow {
