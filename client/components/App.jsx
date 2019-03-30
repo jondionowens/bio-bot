@@ -36,7 +36,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div id="app">
+      <div id="wrapper">
         <div id="chatWindow">sdfdsf</div>
       <div id="inputBox">
         sfdsf
