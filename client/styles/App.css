@@ -10,29 +10,33 @@ body, html {
 
 #wrapper {
   display: grid;
+  
   height: 100%;
   grid-template-columns: [wrapper] 1fr;
   grid-template-rows: [chatWindow]1fr [messageBox]100px;
   grid-row-gap: 1rem;
 }
 
-#rainbow {
-  display: grid;
-  grid-template-columns: repeat(14, 1fr);
-  grid-template-rows: 1fr;
-  grid-column-gap: (2px);
-}
-
-.col {
-  background-color: #00ff00;
-}
 
 #chatWindow {
   background-color: #ffff00;
 }
 
-#inputBox {
-  background-color: #00ff00;
+
+
+#inputWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.chatField {
+  width: 90%;
+  height: 2rem;
+  background: none;
+  border: none;
+  color: #fff;
 }
 
 
