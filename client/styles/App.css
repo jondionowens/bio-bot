@@ -19,7 +19,7 @@ body, html {
 
 
 #chatWindow {
-  background-color: #ffff00;
+  background: none;
 }
 
 
@@ -35,8 +35,13 @@ body, html {
   width: 90%;
   height: 2rem;
   background: none;
-  border: none;
-  color: #fff;
+  border: 2px solid #3FCCB4;
+  color: #E1E1E1;
+  background-color: rgb(6, 37, 44);
+  font-size: 1.4rem;
+  padding: 8px 20px 8px 20px;
+  outline: none;
+  border-radius: 25px;
 }
 
 
