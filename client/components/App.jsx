@@ -37,7 +37,52 @@ class App extends React.Component {
   render() {
     return (
       <div id="wrapper">
-        <div id="chatWindow"></div>
+        <div id="chatWindow">
+          <ul>
+            <li>This is a test</li>
+            <li>This is a test</li>
+            <li>This is a test</li>
+            <li>This is a test</li>
+            <li>This is a test</li>
+            <li>This is a test</li>
+            <li>This is a test</li>
+            <li>This is a test</li>
+            <li>This is a test</li>
+            <li>This is a test</li>
+            <li>This is a test</li>
+            <li>This is a test</li>
+            <li>This is a test</li>
+            <li>This is a test</li>
+            <li>This is a test</li>
+            <li>This is a test</li>
+            <li>This is a test</li>
+            <li>This is a test</li>
+            <li>This is a test</li>
+            <li>This is a test</li>
+            <li>This is a test</li>
+            <li>This is a test</li>
+            <li>This is a test</li>
+            <li>This is a test</li>
+            <li>This is a test</li>
+            <li>This is a test</li>
+            <li>This is a test</li>
+            <li>This is a test</li>
+            <li>This is a test</li>
+            <li>This is a test</li>
+            <li>This is a test</li>
+            <li>This is a test</li>
+            <li>This is a test</li>
+            <li>This is a test</li>
+            <li>This is a test</li>
+            <li>This is a test</li>
+            <li>This is a test</li>
+            <li>This is a test</li>
+            <li>This is a test</li>
+            <li>This is a test</li>
+            <li>This is a test</li>
+            <li>This is a test</li>
+          </ul>
+        </div>
         <Textfield handleChange={this.handleChange.bind(this)} sendMessage={this.sendMessage.bind(this)}/>
       </div>
     )
