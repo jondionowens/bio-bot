@@ -18,7 +18,7 @@ body, html {
 }
 
 
-#chatWindow {
+#chat-window {
   height: auto;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -28,14 +28,14 @@ body, html {
 
 
 
-#inputWrapper {
+#input-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.chatField {
+.chat-field {
   width: 90%;
   height: 2rem;
   background: none;

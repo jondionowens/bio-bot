@@ -37,8 +37,8 @@ class App extends React.Component {
   render() {
     return (
       <div id="wrapper">
-        <div id="chatWindow">
-          <ul>
+        <div id="chat-window">
+          <ul id="messages">
             <li>This is a test</li>
             <li>This is a test</li>
             <li>This is a test</li>
