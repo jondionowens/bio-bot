@@ -1,4 +1,5 @@
 import React from 'react';
+import ChatWindow from './ChatWindow.jsx';
 import Textfield from './Textfield.jsx';
 import '../styles/App.css';
 
@@ -37,52 +38,7 @@ class App extends React.Component {
   render() {
     return (
       <div id="wrapper">
-        <div id="chat-window">
-          <ul id="messages">
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-          </ul>
-        </div>
+        <ChatWindow />
         <Textfield handleChange={this.handleChange.bind(this)} sendMessage={this.sendMessage.bind(this)}/>
       </div>
     )
