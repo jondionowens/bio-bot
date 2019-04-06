@@ -1,0 +1,28 @@
+body, html {
+  background-color: rgb(5, 32, 39);
+  height: 100%;
+  margin: 0px auto;
+}
+
+#app {
+  height: 100%;
+}
+
+#wrapper {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 100px;
+}
+
+#chatWindow {
+  background-color: #ffff00;
+}
+
+#inputBox {
+  background-color: #00ff00;
+  border: none;
+}
+
+
+
