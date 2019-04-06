@@ -1,4 +1,5 @@
 import React from 'react';
+import ChatWindow from './ChatWindow.jsx';
 import Textfield from './Textfield.jsx';
 import '../styles/App.css';
 
@@ -37,10 +38,8 @@ class App extends React.Component {
   render() {
     return (
       <div id="wrapper">
-        <div id="chatWindow">sdfdsf</div>
-      <div id="inputBox">
+        <ChatWindow />
         <Textfield handleChange={this.handleChange.bind(this)} sendMessage={this.sendMessage.bind(this)}/>
-      </div>
       </div>
     )
   }

@@ -11,17 +11,40 @@ body, html {
 #wrapper {
   display: grid;
   height: 100%;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 100px;
+  grid-template-columns: [wrapper] 1fr;
+  grid-template-rows: [chatWindow]1fr [messageBox]100px;
 }
 
-#chatWindow {
-  background-color: #ffff00;
+
+#chat-window {
+  overflow-y: scroll;
+  background: none;
+  color: #fff;
 }
 
-#inputBox {
-  background-color: #00ff00;
-  border: none;
+#messages {
+  display: inline-block;
+  align-self: flex-end;
+}
+
+#input-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.chat-field {
+  width: 90%;
+  height: 2rem;
+  background: none;
+  border: 2px solid #3FCCB4;
+  color: #E1E1E1;
+  background-color: rgb(6, 37, 44);
+  font-size: 1.4rem;
+  padding: 8px 20px 8px 20px;
+  outline: none;
+  border-radius: 25px;
 }
 
 

@@ -2,9 +2,8 @@ import React from 'react';
 
 const TextField = (props) => {
   return (
-    <div>
-      <input type="text" id="inputBox"  onChange={props.handleChange}/>
-      <button onClick={props.sendMessage}>Send</button>
+    <div id="input-wrapper">
+      <input type="text" className="chat-field" onChange={props.handleChange}/>
     </div>
   )
 };
