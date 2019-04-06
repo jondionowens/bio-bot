@@ -10,23 +10,23 @@ body, html {
 
 #wrapper {
   display: grid;
-  
   height: 100%;
   grid-template-columns: [wrapper] 1fr;
   grid-template-rows: [chatWindow]1fr [messageBox]100px;
-  grid-row-gap: 1rem;
 }
 
 
 #chat-window {
-  height: auto;
+  display: flex;
   overflow-y: scroll;
-  overflow-x: hidden;
   background: none;
   color: #fff;
 }
 
-
+#messages {
+  display: inline-block;
+  align-self: flex-end;
+}
 
 #input-wrapper {
   display: flex;

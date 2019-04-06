@@ -1,51 +1,112 @@
 import React from 'react';
+import Message from './Message.jsx';
 
 const ChatWindow = (props) => {
   return (
     <div id="chat-window">
           <ul id="messages">
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
-            <li>This is a test</li>
+            <Message>THIs is a message</Message>
+            <Message>THIs is a message</Message>
+            <Message>THIs is a message</Message>
+            <Message>THIs is a message</Message>
+            <Message>THIs is a message</Message>
+            <Message>THIs is a message</Message>
+            <Message>THIs is a message</Message>
+            <Message>THIs is a message</Message>
+            <Message>THIs is a message</Message>
+            <Message>THIs is a message</Message>
+            <Message>THIs is a message</Message>
+            <Message>THIs is a message</Message>
+            <Message>THIs is a message</Message>
+            <Message>THIs is a message</Message>
+            <Message>THIs is a message</Message>
+            <Message>THIs is a message</Message>
+            <Message>THIs is a message</Message>
+            <Message>THIs is a message</Message>
+            <Message>THIs is a message</Message>
+            <Message>THIs is a message</Message>
+            <Message>THIs is a message</Message>
+            <Message>THIs is a message</Message>
+            <Message>THIs is a message</Message>
+            <Message>THIs is a message</Message>
+            <Message>THIs is a message</Message>
+            <Message>THIs is a message</Message>
+            <Message>THIs is a message</Message>
+            <Message>THIs is a message</Message>
+            <Message>THIs is a message</Message>
+            <Message>THIs is a message</Message>
+            <Message>THIs is a message</Message>
+            <Message>THIs is a message</Message>
+            <Message>THIs is a message</Message>
+            <Message>THIs is a message</Message>
+            <Message>THIs is a message</Message>
+            <Message>THIs is a message</Message>
+            <Message>THIs is a message</Message>
+            <Message>THIs is a message</Message>
+            <Message>THIs is a message</Message>
+            <Message>THIs is a message</Message>
+            <Message>THIs is a message</Message>
+            <Message>THIs is a message</Message>
+            <Message>THIs is a message</Message>
+<Message>THIs is a message</Message>
+<Message>THIs is a message</Message>
+<Message>THIs is a message</Message>
+<Message>THIs is a message</Message>
+<Message>THIs is a message</Message>
+<Message>THIs is a message</Message>
+<Message>THIs is a message</Message>
+<Message>THIs is a message</Message>
+<Message>THIs is a message</Message>
+<Message>THIs is a message</Message>
+<Message>THIs is a message</Message>
+<Message>THIs is a message</Message>
+<Message>THIs is a message</Message>
+<Message>THIs is a message</Message>
+<Message>THIs is a message</Message>
+<Message>THIs is a message</Message>
+<Message>THIs is a message</Message>
+<Message>THIs is a message</Message>
+<Message>THIs is a message</Message>
+<Message>THIs is a message</Message>
+<Message>THIs is a message</Message>
+<Message>THIs is a message</Message>
+<Message>THIs is a message</Message>
+<Message>THIs is a message</Message>
+<Message>THIs is a message</Message>
+<Message>THIs is a message</Message>
+<Message>THIs is a message</Message>
+<Message>THIs is a message</Message>
+<Message>THIs is a message</Message>
+<Message>THIs is a message</Message>
+<Message>THIs is a message</Message>
+<Message>THIs is a message</Message>
+<Message>THIs is a message</Message>
+<Message>THIs is a message</Message>
+<Message>THIs is a message</Message>
+<Message>THIs is a message</Message>
+<Message>THIs is a message</Message>
+<Message>THIs is a message</Message>
+<Message>THIs is a message</Message>
+<Message>THIs is a message</Message>
+<Message>THIs is a message</Message>
+<Message>THIs is a message</Message>
+<Message>THIs is a message</Message>
+<Message>THIs is a message</Message>
+<Message>THIs is a message</Message>
+<Message>THIs is a message</Message>
+<Message>THIs is a message</Message>
+<Message>THIs is a message</Message>
+<Message>THIs is a message</Message>
+<Message>THIs is a message</Message>
+<Message>THIs is a message</Message>
+<Message>THIs is a message</Message>
+<Message>THIs is a message</Message>
+<Message>THIs is a message</Message>
+<Message>THIs is a message</Message>
+<Message>THIs is a message</Message>
+<Message>THIs is a message</Message>
+<Message>THIs is a message</Message>
+<Message>THIs is a message</Message>
           </ul>
         </div>
   )
