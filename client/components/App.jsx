@@ -7,7 +7,7 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      messageHistory: []
+      messages: ['This is the thing', 'This is the thing']
     }
   }
 
@@ -29,16 +29,16 @@ class App extends React.Component {
     .then((res) => {
       return res.json()
     }).then((botResponse) => {
-      const historyUpdate = this.state.messageHistory;
+      const historyUpdate = this.state.messages;
       historyUpdate.push(botResponse[0]);
-      this.setState({messageHistory: historyUpdate})
+      this.setState({messages: historyUpdate}) 
     });
   }
 
   render() {
     return (
       <div id="wrapper">
-        <ChatWindow />
+        <ChatWindow messages={this.state.messages} />
         <Textfield handleChange={this.handleChange.bind(this)} sendMessage={this.sendMessage.bind(this)}/>
       </div>
     )
