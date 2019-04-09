@@ -11,11 +11,26 @@ class App extends React.Component {
     }
   }
 
+  componentDidMount () {
+    document.getElementById("chat-field").addEventListener('keydown', (e) => {
+      if (e.key === "Enter") {
+        this.saveMessage()
+      }
+  });
+  }
+
+  saveMessage(message) {
+    const messages = this.state.messages;
+    messages.push(document.getElementById("chat-field").value)
+    this.setState(messages);
+    document.getElementById("chat-field").value = '';
+  };
+
   handleChange(e) {
-    const targetField = e.target.id;
-    const stateChange = {};
-    stateChange[targetField] = e.target.value;
-    this.setState(stateChange);
+    // const targetField = e.target.id;
+    // const stateChange = {};
+    // stateChange[targetField] = e.target.value;
+    // this.setState(stateChange);
   };
 
   sendMessage() {
@@ -39,7 +54,7 @@ class App extends React.Component {
     return (
       <div id="wrapper">
         <ChatWindow messages={this.state.messages} />
-        <Textfield handleChange={this.handleChange.bind(this)} sendMessage={this.sendMessage.bind(this)}/>
+        <Textfield saveMessage={this.saveMessage.bind(this)} sendMessage={this.sendMessage.bind(this)}/>
       </div>
     )
   }
