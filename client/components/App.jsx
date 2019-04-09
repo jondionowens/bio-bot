@@ -1,13 +1,15 @@
 import React from 'react';
 import ChatWindow from './ChatWindow.jsx';
 import Textfield from './Textfield.jsx';
+import {TextMessage} from '../classes/Messages.js'
 import '../styles/App.css';
+
 
 class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      messages: ['This is the thing', 'This is the thing']
+      messages: []
     }
   }
 
@@ -19,18 +21,19 @@ class App extends React.Component {
   });
   }
 
-  saveMessage(message) {
+  saveMessage() {
     const messages = this.state.messages;
-    messages.push(document.getElementById("chat-field").value)
+    const message = new TextMessage('user', document.getElementById("chat-field").value);
+    messages.push(message);
     this.setState(messages);
     document.getElementById("chat-field").value = '';
   };
 
   handleChange(e) {
-    // const targetField = e.target.id;
-    // const stateChange = {};
-    // stateChange[targetField] = e.target.value;
-    // this.setState(stateChange);
+    const targetField = e.target.id;
+    const stateChange = {};
+    stateChange[targetField] = e.target.value;
+    this.setState(stateChange);
   };
 
   sendMessage() {
