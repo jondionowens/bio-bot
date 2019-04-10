@@ -16,7 +16,7 @@ class App extends React.Component {
   componentDidMount () {
     document.getElementById("chat-field").addEventListener('keydown', (e) => {
       if (e.key === "Enter") {
-        this.saveMessage()
+        this.saveMessage();
       }
   });
   }
@@ -24,6 +24,7 @@ class App extends React.Component {
   saveMessage() {
     const messages = this.state.messages;
     const message = new TextMessage('user', document.getElementById("chat-field").value);
+    console.log(message)
     messages.push(message);
     this.setState(messages);
     document.getElementById("chat-field").value = '';

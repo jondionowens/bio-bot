@@ -4,7 +4,7 @@ import uniqid from 'uniqid';
 
 const ChatWindow = (props) => {
   const messages = props.messages.map((message) =>
-    <li key={uniqid()}>{message.body.text}</li>
+    <Message avatar={message.body.avatar} text={message.body.text} key={uniqid()} />
   );
 
   return (
