@@ -27,7 +27,7 @@ app.post('/api/bot', (req, res) => {
   });
 });
 
-app.post('/api/test', (req, res) => {
+app.get('/api/test', (req, res) => {
   res.json({"text": "hello"})
 });
 
