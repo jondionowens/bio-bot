@@ -21,11 +21,6 @@ class App extends React.Component {
   });
   }
 
-  // user inputs a message
-  // it gets added to state and the DOM
-  // it also gets sent to watson
-  // watsons response comes back to the
-
   printMessage(avatar, text) {
     if (avatar === 'user') {
       const messages = this.state.messages;
