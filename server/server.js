@@ -8,6 +8,7 @@ const cors = require('cors');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(cors())
 
 const jonBot = require('./bot/bot.js');
 
@@ -15,7 +16,6 @@ const jonBot = require('./bot/bot.js');
 app.use('/', express.static(path.join(__dirname, '../public')));
 
 app.use('/api/bot', (req, res) => {
-  console.log('SERVER.JS', req.body);
   jonBot.message({
     workspace_id: process.env.WATSON_JONBOT_WORKSPACE_ID,
     input: {'text': req.body.userMessage}
