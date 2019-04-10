@@ -15,7 +15,7 @@ const jonBot = require('./bot/bot.js');
 
 app.use('/', express.static(path.join(__dirname, '../public')));
 
-app.post('https://5cae755c5fa2420008ef80e5--focused-panini-13e9e6.netlify.com/api/bot', (req, res) => {
+app.post('/api/bot', (req, res) => {
   jonBot.message({
     workspace_id: process.env.WATSON_JONBOT_WORKSPACE_ID,
     input: {'text': req.body.userMessage}
@@ -27,7 +27,7 @@ app.post('https://5cae755c5fa2420008ef80e5--focused-panini-13e9e6.netlify.com/ap
   });
 });
 
-app.get('https://5cae755c5fa2420008ef80e5--focused-panini-13e9e6.netlify.com/api/test', (req, res) => {
+app.get('/api/test', (req, res) => {
   res.json({"text": "hello"})
 });
 
