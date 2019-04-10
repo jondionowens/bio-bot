@@ -13,7 +13,7 @@ const Message = (props) => {
     }
   } else {
     return (
-      <li>BOT!</li>
+      <li>{props.text}</li>
     )
   }
 };

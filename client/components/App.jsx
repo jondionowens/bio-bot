@@ -26,17 +26,19 @@ class App extends React.Component {
   // it also gets sent to watson
   // watsons response comes back to the
 
-  printMessage(avatar) {
+  printMessage(avatar, text) {
     if (avatar === 'user') {
       const messages = this.state.messages;
-      const message = new TextMessage('user', document.getElementById("chat-field").value);
-      console.log(message)
+      const message = new TextMessage(avatar, document.getElementById("chat-field").value);
       messages.push(message);
       this.setState(messages);
       document.getElementById("chat-field").value = '';
-      this.sendMessageToBot(message.body.text);
+      this.sendMessageToBot(message.body.text); 
     } else {
-
+      const messages = this.state.messages;
+      const message = new TextMessage(avatar, text);
+      messages.push(message);
+      this.setState(messages);
     }
   };
 
@@ -58,7 +60,7 @@ class App extends React.Component {
     .then((res) => {
       return res.json()
     }).then((botResponse) => {
-      console.log(botResponse)
+      this.printMessage('bot', botResponse);
     });
   }
 
