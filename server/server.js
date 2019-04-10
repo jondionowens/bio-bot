@@ -15,7 +15,7 @@ const jonBot = require('./bot/bot.js');
 
 app.use('/', express.static(path.join(__dirname, '../public')));
 
-app.use('/api/bot', (req, res) => {
+app.post('/api/bot', (req, res) => {
   jonBot.message({
     workspace_id: process.env.WATSON_JONBOT_WORKSPACE_ID,
     input: {'text': req.body.userMessage}
