@@ -2,7 +2,6 @@ import React from 'react';
 import ChatWindow from './ChatWindow.jsx';
 import Textfield from './Textfield.jsx';
 import {TextMessage} from '../classes/Messages.js'
-import '../styles/App.css';
 
 
 class App extends React.Component {
