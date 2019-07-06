@@ -4,7 +4,6 @@
   "description": "Personal Website of Jon Dion Owens",
   "main": "index.js",
   "scripts": {
-    "start": "concurrently \"npm:server-dev\" \"npm:react-dev\" \"npm:watch-node\"",
     "server-dev": "nodemon server/server.js",
     "react-dev": "webpack -d --env.PROD=false --watch",
     "prod": "webpack --env.PROD=true -p",
