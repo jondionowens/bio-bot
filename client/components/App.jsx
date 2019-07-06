@@ -3,6 +3,7 @@ import ChatWindow from './ChatWindow.jsx';
 import Textfield from './Textfield.jsx';
 import {TextMessage} from '../classes/Messages.js'
 
+const env = process.env.PROD === 'true' ? process.env.API_URL_PROD : process.env.API_URL_DEV;
 
 class App extends React.Component {
   constructor() {
@@ -44,7 +45,7 @@ class App extends React.Component {
   };
 
   sendMessageToBot(message) {
-    fetch('/api/bot',{
+    fetch(`/api/bot`,{
       method: 'POST',
       body: JSON.stringify({
         userMessage: message
