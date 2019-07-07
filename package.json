@@ -2,6 +2,9 @@
   "name": "personal-site",
   "version": "1.0.0",
   "description": "Personal Website of Jon Dion Owens",
+  "engines": {
+    "node": "10.13.0"
+  }
   "main": "index.js",
   "scripts": {
     "start": "node server/server.js",
@@ -40,5 +43,5 @@
     "webpack": "^4.20.2",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.9"
-  }
+  },
 }
