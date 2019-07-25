@@ -2,6 +2,7 @@ import React from 'react';
 import ChatWindow from './ChatWindow.jsx';
 import Textfield from './Textfield.jsx';
 import {TextMessage} from '../classes/Messages.js';
+import {decideAction} from '../actions/decideAction.js';
 import './App.css';
 
 const env = process.env.PROD === 'true' ? process.env.API_URL_PROD : process.env.API_URL_DEV;
@@ -22,6 +23,7 @@ class App extends React.Component {
   });
   }
 
+
   printMessage(avatar, text) {
     if (avatar === 'user') {
       const messages = this.state.messages;
@@ -31,6 +33,7 @@ class App extends React.Component {
       document.getElementById("chat-field").value = '';
       this.sendMessageToBot(message.body.text); 
     } else {
+      decideAction(text[0]);
       const messages = this.state.messages;
       const message = new TextMessage(avatar, text);
       messages.push(message);
