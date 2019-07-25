@@ -1,8 +1,8 @@
 import React from 'react';
 import ChatWindow from './ChatWindow.jsx';
 import Textfield from './Textfield.jsx';
-import {TextMessage} from '../classes/Messages.js';
-import {decideAction} from '../actions/decideAction.js';
+import { TextMessage } from '../classes/Messages.js';
+import { decideAction } from '../actions/decideAction.js';
 import './App.css';
 
 const env = process.env.PROD === 'true' ? process.env.API_URL_PROD : process.env.API_URL_DEV;
@@ -15,12 +15,12 @@ class App extends React.Component {
     }
   }
 
-  componentDidMount () {
+  componentDidMount() {
     document.getElementById("chat-field").addEventListener('keydown', (e) => {
       if (e.key === "Enter") {
         this.printMessage('user');
       }
-  });
+    });
   }
 
 
@@ -31,13 +31,21 @@ class App extends React.Component {
       messages.push(message);
       this.setState(messages);
       document.getElementById("chat-field").value = '';
-      this.sendMessageToBot(message.body.text); 
+      this.sendMessageToBot(message.body.text);
     } else {
-      decideAction(text[0]);
-      const messages = this.state.messages;
-      const message = new TextMessage(avatar, text);
-      messages.push(message);
-      this.setState(messages);
+
+      if (text[0].slice(0, 3) === '!**') {
+        const internalResponse = decideAction(text[0]);
+        const messages = this.state.messages;
+        const message = new TextMessage(avatar, internalResponse);
+        messages.push(message);
+        this.setState(messages);
+      } else {
+        const messages = this.state.messages;
+        const message = new TextMessage(avatar, text);
+        messages.push(message);
+        this.setState(messages);
+      }
     }
   };
 
@@ -49,25 +57,25 @@ class App extends React.Component {
   };
 
   sendMessageToBot(message) {
-    fetch(`/api/bot`,{
+    fetch(`/api/bot`, {
       method: 'POST',
       body: JSON.stringify({
         userMessage: message
       }),
-      headers: {"Content-Type": "application/json"}
+      headers: { "Content-Type": "application/json" }
     })
-    .then((res) => {
-      return res.json()
-    }).then((botResponse) => {
-      this.printMessage('bot', botResponse);
-    });
+      .then((res) => {
+        return res.json()
+      }).then((botResponse) => {
+        this.printMessage('bot', botResponse);
+      });
   }
 
   render() {
     return (
       <div id="wrapper">
         <ChatWindow messages={this.state.messages} />
-        <Textfield printMessage={this.printMessage.bind(this)}/>
+        <Textfield printMessage={this.printMessage.bind(this)} />
       </div>
     )
   }

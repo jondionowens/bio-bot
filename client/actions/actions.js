@@ -1,5 +1,5 @@
 module.exports = {
   getResume: () => {
-    alert('Sending the resume!!!!')
+    return 'You can download it here: http://www.google.com/resume';
   }
 }
