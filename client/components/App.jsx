@@ -1,7 +1,8 @@
 import React from 'react';
 import ChatWindow from './ChatWindow.jsx';
 import Textfield from './Textfield.jsx';
-import {TextMessage} from '../classes/Messages.js'
+import {TextMessage} from '../classes/Messages.js';
+import './App.css';
 
 const env = process.env.PROD === 'true' ? process.env.API_URL_PROD : process.env.API_URL_DEV;
 
