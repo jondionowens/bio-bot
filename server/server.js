@@ -21,7 +21,9 @@ app.post('/api/bot', (req, res) => {
     if (err)
       console.log('error:', err);
     else
-      res.send(JSON.stringify(response.output.text, null, 2))
+      // you need to return the entire response object to get access to all the timing stuff
+      console.log(response.output.generic)
+      res.send(JSON.stringify(response, null, 2))
   });
 });
 

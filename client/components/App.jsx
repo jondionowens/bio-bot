@@ -24,25 +24,25 @@ class App extends React.Component {
   }
 
 
-  printMessage(avatar, text) {
+  printMessage(avatar, inputMessage) {
     if (avatar === 'user') {
       const messages = this.state.messages;
       const message = new TextMessage(avatar, document.getElementById("chat-field").value);
       messages.push(message);
       this.setState(messages);
       document.getElementById("chat-field").value = '';
-      this.sendMessageToBot(message.body.text);
+      this.sendMessageToBot(message.body.inputMessage);
     } else {
-
-      if (text[0].slice(0, 3) === '!**') {
-        const internalResponse = decideAction(text[0]);
+      console.log(inputMessage.output.text[0], 'ASS!')
+      if (inputMessage.output.text[0].slice(0, 3) === '!**') {
+        const internalResponse = decideAction(inputMessage[0]);
         const messages = this.state.messages;
         const message = new TextMessage(avatar, internalResponse);
         messages.push(message);
         this.setState(messages);
       } else {
         const messages = this.state.messages;
-        const message = new TextMessage(avatar, text);
+        const message = new TextMessage(avatar, inputMessage);
         messages.push(message);
         this.setState(messages);
       }
@@ -67,6 +67,7 @@ class App extends React.Component {
       .then((res) => {
         return res.json()
       }).then((botResponse) => {
+        console.log(botResponse)
         this.printMessage('bot', botResponse);
       });
   }
