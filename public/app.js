@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("module.exports = {\n  getResume: function getResume() {\n    return 'You can download it here: http://www.google.com/resume';\n  }\n};//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jbGllbnQvYWN0aW9ucy9hY3Rpb25zLmpzLmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vY2xpZW50L2FjdGlvbnMvYWN0aW9ucy5qcz9mNWY5Il0sInNvdXJjZXNDb250ZW50IjpbIm1vZHVsZS5leHBvcnRzID0ge1xyXG4gIGdldFJlc3VtZTogKCkgPT4ge1xyXG4gICAgcmV0dXJuICdZb3UgY2FuIGRvd25sb2FkIGl0IGhlcmU6IGh0dHA6Ly93d3cuZ29vZ2xlLmNvbS9yZXN1bWUnO1xyXG4gIH1cclxufSJdLCJtYXBwaW5ncyI6IkFBQUE7QUFDQTtBQUNBO0FBQ0E7QUFIQSIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./client/actions/actions.js\n");
+eval("module.exports = {\n  getResume: function getResume() {\n    return 'You can download it <a href=\"http://www.google.com/resume\">here</a>';\n  }\n};//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jbGllbnQvYWN0aW9ucy9hY3Rpb25zLmpzLmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vY2xpZW50L2FjdGlvbnMvYWN0aW9ucy5qcz9mNWY5Il0sInNvdXJjZXNDb250ZW50IjpbIm1vZHVsZS5leHBvcnRzID0ge1xyXG4gIGdldFJlc3VtZTogKCkgPT4ge1xyXG4gICAgcmV0dXJuICdZb3UgY2FuIGRvd25sb2FkIGl0IDxhIGhyZWY9XCJodHRwOi8vd3d3Lmdvb2dsZS5jb20vcmVzdW1lXCI+aGVyZTwvYT4nO1xyXG4gIH1cclxufSJdLCJtYXBwaW5ncyI6IkFBQUE7QUFDQTtBQUNBO0FBQ0E7QUFIQSIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./client/actions/actions.js\n");
 
 /***/ }),
 
